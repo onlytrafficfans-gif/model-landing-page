@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Private Access — Model Name</title>
-<meta name="description" content="Exclusive private content. Enter the room.">
+<title>Mz.Breezy — Private Access</title>
+<meta name="description" content="Mz.Breezy exclusive. Unfiltered. Private. Enter her world.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0a0a0a;
-  --bg-elev: #141414;
-  --text: #f5f5f5;
-  --text-muted: #a3a3a3;
-  --accent: #c41e3a;
-  --accent-hover: #e63950;
-  --gold: #d4af37;
-  --border: rgba(255,255,255,0.08);
-  --radius: 12px;
+  --bg: #050505;
+  --bg-elev: #111111;
+  --text: #f8f8f8;
+  --text-muted: #b0b0b0;
+  --accent: #d81b60;
+  --accent-hover: #ff2d6a;
+  --gold: #e6b800;
+  --border: rgba(255,255,255,0.06);
+  --radius: 14px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -34,33 +34,41 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem 1.25rem 3rem;
+  padding: 2rem 1.25rem 3.5rem;
   background:
-    linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%),
-    url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80') center/cover;
+    linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.7) 100%),
+    #0a0a0a;
   position: relative;
 }
-.hero-content { max-width: 480px; }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(216,27,96,0.15), transparent 50%);
+  pointer-events: none;
+}
+.hero-content { max-width: 480px; position: relative; z-index: 1; }
 .eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   font-weight: 600;
 }
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 8vw, 3.8rem);
+  font-size: clamp(2.8rem, 9vw, 4.2rem);
   font-weight: 700;
-  line-height: 1.05;
-  margin-bottom: 0.75rem;
+  line-height: 0.95;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
 }
 .sub {
   font-size: 1.05rem;
   color: var(--text-muted);
-  margin-bottom: 1.75rem;
-  max-width: 36ch;
+  margin-bottom: 1.8rem;
+  max-width: 32ch;
 }
 .cta-row {
   display: flex;
@@ -70,7 +78,7 @@ h1 {
 .btn-primary, .btn-secondary {
   display: block;
   text-align: center;
-  padding: 1rem 1.5rem;
+  padding: 1.05rem 1.5rem;
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
@@ -80,85 +88,87 @@ h1 {
 .btn-primary {
   background: var(--accent);
   color: white;
+  box-shadow: 0 8px 24px rgba(216,27,96,0.35);
 }
 .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
 .btn-secondary {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
   color: white;
   border: 1px solid var(--border);
 }
-.btn-secondary:hover { background: rgba(255,255,255,0.14); }
+.btn-secondary:hover { background: rgba(255,255,255,0.1); }
 .trust {
-  margin-top: 1.25rem;
-  font-size: 0.8rem;
+  margin-top: 1.4rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
   flex-wrap: wrap;
 }
 .section {
-  padding: 3.5rem 1.25rem;
+  padding: 3.8rem 1.25rem;
   max-width: 640px;
   margin: 0 auto;
 }
 .section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  margin-bottom: 0.8rem;
 }
 .grid-2 {
   display: grid;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
 }
 .card {
   background: var(--bg-elev);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.25rem;
+  padding: 1.3rem;
 }
-.card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+.card h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
 .card p { font-size: 0.9rem; color: var(--text-muted); }
 .crak-section {
-  background: #111;
+  background: #0c0c0c;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 .crak-links {
   display: grid;
   gap: 0.75rem;
-  margin-top: 1.25rem;
+  margin-top: 1.3rem;
 }
 .crak-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  padding: 1.05rem 1.25rem;
   background: var(--bg-elev);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   text-decoration: none;
   color: white;
   font-weight: 500;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
 }
-.crak-btn:hover { border-color: var(--accent); }
+.crak-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
 .crak-btn span.badge {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   background: var(--accent);
-  padding: 0.2rem 0.5rem;
+  padding: 0.22rem 0.55rem;
   border-radius: 999px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  font-weight: 600;
 }
 footer {
-  padding: 2rem 1.25rem;
+  padding: 2.2rem 1.25rem;
   text-align: center;
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 0.72rem;
+  color: #555;
 }
 @media (min-width: 768px) {
-  .hero { padding: 4rem 3rem; }
-  .hero-content { max-width: 560px; }
+  .hero { padding: 4.5rem 3rem; }
+  .hero-content { max-width: 540px; }
   .cta-row { flex-direction: row; }
   .btn-primary, .btn-secondary { flex: 1; }
   .grid-2 { grid-template-columns: 1fr 1fr; }
@@ -169,46 +179,46 @@ footer {
 
 <section class="hero">
   <div class="hero-content">
-    <div class="eyebrow">Private Access</div>
-    <h1>Model Name</h1>
-    <p class="sub">The side social media never shows. Exclusive content. No filters. Just her.</p>
+    <div class="eyebrow">Private • Unfiltered</div>
+    <h1>Mz.Breezy</h1>
+    <p class="sub">The version social media can’t handle. Exclusive drops. Direct access. No filters.</p>
     <div class="cta-row">
-      <a href="https://onlyfans.com/YOURMODEL" class="btn-primary">Enter Private Page</a>
-      <a href="#crak" class="btn-secondary">Live Cams & More</a>
+      <a href="https://onlyfans.com/mz-breezy" class="btn-primary">Enter Her Page</a>
+      <a href="#crak" class="btn-secondary">Live Cams</a>
     </div>
     <div class="trust">
       <span>✓ Exclusive content</span>
-      <span>✓ Direct access</span>
-      <span>✓ Updated daily</span>
+      <span>✓ Direct messaging</span>
+      <span>✓ Updated often</span>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>What you get inside</h2>
+  <h2>What you unlock</h2>
   <div class="grid-2">
     <div class="card">
-      <h3>Unfiltered drops</h3>
-      <p>Full scenes, customs, and the content that never hits public feeds.</p>
+      <h3>Full unfiltered drops</h3>
+      <p>Scenes and customs that never hit public feeds. Raw. Direct. Hers.</p>
     </div>
     <div class="card">
-      <h3>Direct messaging</h3>
-      <p>Talk to her. Request what you want. She actually replies.</p>
+      <h3>Direct access</h3>
+      <p>Message her. Request what you want. She actually responds.</p>
     </div>
     <div class="card">
-      <h3>PPV & tips</h3>
-      <p>Locked exclusives and personal requests. Pay only for what you unlock.</p>
+      <h3>Locked exclusives</h3>
+      <p>PPV and personal requests. Pay only for what you unlock.</p>
     </div>
     <div class="card">
-      <h3>Regular updates</h3>
-      <p>New content multiple times a week. Never the same recycled clips.</p>
+      <h3>Fresh content</h3>
+      <p>Regular updates. No recycled clips. Always something new.</p>
     </div>
   </div>
 </section>
 
 <section class="section crak-section" id="crak">
-  <h2>Live now</h2>
-  <p style="color:var(--text-muted); margin-bottom:0.5rem;">While you’re here — live cams and private shows running right now.</p>
+  <h2>Live right now</h2>
+  <p style="color:var(--text-muted); margin-bottom:0.4rem;">While you’re here — live cams and private shows running.</p>
   <div class="crak-links">
     <a href="https://crakrevenue.com/YOUR-CAM-LINK" class="crak-btn" target="_blank" rel="noopener">
       Live Cams
@@ -226,9 +236,9 @@ footer {
 </section>
 
 <section class="section" style="text-align:center;">
-  <h2>Ready?</h2>
-  <p style="color:var(--text-muted); margin:0.75rem 0 1.5rem;">The public page is the preview. Everything else happens inside.</p>
-  <a href="https://onlyfans.com/YOURMODEL" class="btn-primary" style="max-width:320px; margin:0 auto;">Unlock Full Access</a>
+  <h2>Ready for the real thing?</h2>
+  <p style="color:var(--text-muted); margin:0.8rem 0 1.6rem;">Public is the preview. Everything else happens inside.</p>
+  <a href="https://onlyfans.com/mz-breezy" class="btn-primary" style="max-width:320px; margin:0 auto;">Unlock Mz.Breezy</a>
 </section>
 
 <footer>
