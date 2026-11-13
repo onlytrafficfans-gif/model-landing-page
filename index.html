@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Access — Model Name</title>
+<meta name="description" content="Exclusive private content. Enter the room.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0a;
+  --bg-elev: #141414;
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --accent: #c41e3a;
+  --accent-hover: #e63950;
+  --gold: #d4af37;
+  --border: rgba(255,255,255,0.08);
+  --radius: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.25rem 3rem;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%),
+    url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80') center/cover;
+  position: relative;
+}
+.hero-content { max-width: 480px; }
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 8vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+.sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+  max-width: 36ch;
+}
+.cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.btn-primary, .btn-secondary {
+  display: block;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.14); }
+.trust {
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.section {
+  padding: 3.5rem 1.25rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.grid-2 {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+.card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+.card p { font-size: 0.9rem; color: var(--text-muted); }
+.crak-section {
+  background: #111;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.crak-links {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.crak-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: border-color 0.2s;
+}
+.crak-btn:hover { border-color: var(--accent); }
+.crak-btn span.badge {
+  font-size: 0.7rem;
+  background: var(--accent);
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+footer {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+}
+@media (min-width: 768px) {
+  .hero { padding: 4rem 3rem; }
+  .hero-content { max-width: 560px; }
+  .cta-row { flex-direction: row; }
+  .btn-primary, .btn-secondary { flex: 1; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Private Access</div>
+    <h1>Model Name</h1>
+    <p class="sub">The side social media never shows. Exclusive content. No filters. Just her.</p>
+    <div class="cta-row">
+      <a href="https://onlyfans.com/YOURMODEL" class="btn-primary">Enter Private Page</a>
+      <a href="#crak" class="btn-secondary">Live Cams & More</a>
+    </div>
+    <div class="trust">
+      <span>✓ Exclusive content</span>
+      <span>✓ Direct access</span>
+      <span>✓ Updated daily</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What you get inside</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Unfiltered drops</h3>
+      <p>Full scenes, customs, and the content that never hits public feeds.</p>
+    </div>
+    <div class="card">
+      <h3>Direct messaging</h3>
+      <p>Talk to her. Request what you want. She actually replies.</p>
+    </div>
+    <div class="card">
+      <h3>PPV & tips</h3>
+      <p>Locked exclusives and personal requests. Pay only for what you unlock.</p>
+    </div>
+    <div class="card">
+      <h3>Regular updates</h3>
+      <p>New content multiple times a week. Never the same recycled clips.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section crak-section" id="crak">
+  <h2>Live now</h2>
+  <p style="color:var(--text-muted); margin-bottom:0.5rem;">While you’re here — live cams and private shows running right now.</p>
+  <div class="crak-links">
+    <a href="https://crakrevenue.com/YOUR-CAM-LINK" class="crak-btn" target="_blank" rel="noopener">
+      Live Cams
+      <span class="badge">HOT</span>
+    </a>
+    <a href="https://crakrevenue.com/YOUR-DATING-LINK" class="crak-btn" target="_blank" rel="noopener">
+      Private Dating
+      <span class="badge">NEW</span>
+    </a>
+    <a href="https://crakrevenue.com/YOUR-CPA-LINK" class="crak-btn" target="_blank" rel="noopener">
+      Exclusive Offers
+      <span class="badge">$$$</span>
+    </a>
+  </div>
+</section>
+
+<section class="section" style="text-align:center;">
+  <h2>Ready?</h2>
+  <p style="color:var(--text-muted); margin:0.75rem 0 1.5rem;">The public page is the preview. Everything else happens inside.</p>
+  <a href="https://onlyfans.com/YOURMODEL" class="btn-primary" style="max-width:320px; margin:0 auto;">Unlock Full Access</a>
+</section>
+
+<footer>
+  18+ only. All models are of legal age. Affiliate links present.
+</footer>
+
+</body>
+</html>
